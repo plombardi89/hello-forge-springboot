@@ -6,11 +6,10 @@ containers:
     context: .
     rebuild:
       root: /srv
-      command: ./gradlew test shadowJar
+      command: ./gradlew test build
       sources:
         - build.gradle
         - settings.gradle
-        - gradle.properties
         - src
 
 profiles:
