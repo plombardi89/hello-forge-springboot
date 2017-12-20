@@ -34,7 +34,7 @@ spec:
   selector:
     app: {{ build.name }}
   ports:
-    - name: http-api
+    - targetPort: http-api
       port: 80
 
 ---
