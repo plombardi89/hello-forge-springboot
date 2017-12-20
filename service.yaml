@@ -1,0 +1,25 @@
+name: hellospring
+namespace: hellospring
+
+containers:
+  - dockerfile: Dockerfile
+    context: .
+    rebuild:
+      root: /srv
+      command: ./gradlew test shadowJar
+      sources:
+        - build.gradle
+        - settings.gradle
+        - gradle.properties
+        - src
+
+profiles:
+  dev:
+    name: {{ branch.replace('/', '-') }}
+  staging:
+    name: next
+  stable: { }
+
+branches:
+  master: stable
+  dev/*:  dev

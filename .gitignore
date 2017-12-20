@@ -1,0 +1,14 @@
+# --- IntelliJ IDEA ---
+.idea
+*.iml
+out
+
+# --- K Desktop Environment ("KDE") ---
+.directory
+
+# --- Gradle ---
+.gradle
+build
+
+# --- Forge ---
+forge.yaml
